@@ -2,6 +2,11 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static utils.Utils.waitPresent;
 
 public class HomePage {
@@ -13,6 +18,7 @@ public class HomePage {
     private By logInButton = By.xpath("//div//div//button[@onclick= 'logIn()']");
     private By signUpButton = By.xpath("//div/div//button[@onclick='register()']");
     private By loginSuccess = By.xpath("//div//ul//li//a[@id = 'nameofuser']");
+    private By categoryList = By.xpath("//div//h4//a [@class]");
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -43,11 +49,26 @@ public class HomePage {
         Thread.sleep(2000);
         return driver.switchTo().alert().getText();
     }
+    public String checkList(){
+        waitPresent(driver, categoryList);
+        List<WebElement> myList=driver.findElements(categoryList);
+        List<String> all_elements_text=new ArrayList<>();
+            for(int i=0; i<myList.size(); i++) {
+                all_elements_text.add(myList.get(i).getText());
+            }
+            return all_elements_text.toString();
+    }
     public void enterRequiredSignUpData(String path, String data){
         String element = "//div//form//div//input[@id= 'sign-%s']";
         element = String.format(element, path);
         waitPresent(driver, By.xpath(element));
         driver.findElement(By.xpath(element)).sendKeys(data);
+    }
+    public void chooseCategory(String path){
+        String element = "//div//div//a [contains(., '%s')]";
+        element = String.format(element, path);
+        waitPresent(driver, By.xpath(element));
+        driver.findElement(By.xpath(element)).click();
     }
     public void enterRequiredLogInData(String path, String data){
         String element = "//div//form//div//input[@id= 'login%s']";

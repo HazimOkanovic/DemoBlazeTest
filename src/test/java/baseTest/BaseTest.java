@@ -12,7 +12,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/hazim/IdeaProjects/DemoBlazeTest/Resources/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
         driver.manage().window().maximize();
