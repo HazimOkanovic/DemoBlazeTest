@@ -9,7 +9,7 @@ public class SNU001successfulSignUp extends BaseTest {
 
     private String signUpText = "Sign up";
     private String [] paths = {"username", "password"};
-    private String [] data = {"Hazim3", "12345"};
+    private String [] data = {"Hazim9854", "12345"};
     private String signUpSuccess = "Sign up successful.";
 
     @Test(priority = 0)

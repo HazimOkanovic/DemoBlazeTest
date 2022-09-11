@@ -8,7 +8,7 @@ import static org.testng.Assert.assertEquals;
 public class SNU002usingSpecialCharacters extends BaseTest {
     private String signUpText = "Sign up";
     private String [] paths = {"username", "password"};
-    private String [] data = {"Hazim.1", "12345"};
+    private String [] data = {"Hazim.589557", "12345"};
     private String signUpSuccess = "Sign up successful.";
 
     @Test(priority = 0)

@@ -23,6 +23,7 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
+
     public void clickLogIn(){
        waitPresent(driver, logIn);
        driver.findElement(logIn).click();

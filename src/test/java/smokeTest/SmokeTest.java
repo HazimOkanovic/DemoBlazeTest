@@ -6,6 +6,8 @@ import pages.CartPage;
 import static org.testng.Assert.assertEquals;
 
 public class SmokeTest extends BaseTest {
+    CartPage cartPage;
+
     private String deviceName = "Nexus 6";
     private String price = "650";
     private String priceCheckOut = "Total: 650";
@@ -13,7 +15,6 @@ public class SmokeTest extends BaseTest {
     private String [] infoPaths = {"name", "country", "city", "card", "month", "year"};
     private String [] requiredInfo = {"Hazim Okanovic", "Bosnia and Herzegovina", "Zepce", "1234123412345", "January", "2022"};
     private String successMessage = "Thank you for your purchase!";
-    CartPage cartPage;
 
     @Test (priority = 0)
     public void checkNameOfDevice(){

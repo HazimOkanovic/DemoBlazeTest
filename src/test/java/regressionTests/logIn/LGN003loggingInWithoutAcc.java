@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 public class LGN003loggingInWithoutAcc extends BaseTest {
     private String logInText = "Log in";
     private String [] path = {"username", "password"};
-    private String [] data = {"jahajaha", "12345"};
+    private String [] data = {"Hazim89", "12345"};
     private String errorMessage = "User does not exist.";
 
     @Test (priority = 0)
