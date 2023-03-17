@@ -1,5 +1,5 @@
 # DemoBlazeTest
-Automation tests of a website that was built for practicing test automation. There is a smoke test and different regression tests. 
+Automation tests of a website that was built for practicing test automation. There is a smoke test and regression tests. 
 
 This project is an automated smoke test for a website demoblaze.com. The project basically tests the core functions of the mentioned website – buying a device, signing up, and logging in.
 
